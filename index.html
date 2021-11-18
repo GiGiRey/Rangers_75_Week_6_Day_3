@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="css/main.css"> 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- Be sure to add defer to the script line -->
+<script src="js/main.js" defer></script>
+<title>Racer API</title>
+</head>
+<body>
+
+    <!--Ranger Data HTML Elements-->
+    <header class="hero-section">
+        <div class="container">
+            <div class="row">
+                
+                <h1 class="header-text text-white">Get Your F1 Driver Standings Here!</h1>  <button class="btn btn-dark" onclick="clear_data()">Reset Data</button>
+            </div>
+            <div class="row">
+                
+                <h3 class="header-text text-white"> Enter Season (YYYY) and Round Number to see position and points</h3>
+            
+            </div>
+        
+            <form>
+        
+                <form name="testData" id="testDataForm">
+                <label for="season">Season</label>
+                <input type="text" name="season" id="season">
+    
+                <label for="round">Round</label>
+                <input type="text" name="round" id="round">
+    
+                <button class="btn btn-dark" type="submit" id="submitButton" onclick="load_data()">Get Standings</button>     
+            </form>
+        
+        <table id="driverTable" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Position</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Nationality</th>
+                    <th scope="col">Sponsor</th>
+                    <th scope="col">Points</th>
+                </tr>
+            </thead>
+                 <tbody id="tablebody"></tbody>
+                 <section class="list-group racer-list">
+
+                </section>
+                </table>
+        
+    </header>
+    <!-- <button class="btn btn-danger" onclick="clear_data()">Clear Data</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <form name="testData" id="testDataForm">
+                    <label for="season">Season</label>
+                    <input type="text" name="season" id="season">
+            
+                    <label for="round">Round</label>
+                    <input type="text" name="round" id="round">
+            
+                    <button class="btn btn-primary" type="submit" id="submitButton" onclick="load_data()">Get Standings</button>     
+                </form>
+                <button class="btn btn-danger" onclick="clear_data()">Clear Data</button>
+                <table id="driverTable" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Position</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Nationality</th>
+                            <th scope="col">Sponsor</th>
+                            <th scope="col">Points</th>
+                        </tr>
+                    </thead>
+                         <tbody id="tablebody"></tbody>
+                         <section class="list-group racer-list">
+
+                        </section>
+                        </table>
+                       
+
+            </div>
+        </div>
+    </div> -->
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+</html>

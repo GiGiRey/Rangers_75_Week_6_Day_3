@@ -1,0 +1,11 @@
+.color-change{
+    color: blueviolet;
+}
+
+/* Profile Styles */
+.hero-section{
+    height: 95vh;
+    background-image:linear-gradient(to right bottom, rgba(30, 115,172, 0.7), rgba(142, 57, 153, 0.6)), url(../images/f1-cover.png);
+    background-size: cover;
+  
+}
